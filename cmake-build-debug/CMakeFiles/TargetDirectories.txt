@@ -1,0 +1,3 @@
+C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/cmake-build-debug/CMakeFiles/Trabalho2.dir
+C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
