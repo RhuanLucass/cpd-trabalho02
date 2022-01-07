@@ -74,6 +74,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_enderecamento_aberto.c">
+			<Option target="Trabalho2"/>
+		</Unit>
+		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_encadeada.h">
+			<Option target="Trabalho2"/>
+		</Unit>
+		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_endadeada.c">
+			<Option target="Trabalho2"/>
+		</Unit>
 		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/main.c">
 			<Option target="Trabalho2"/>
 		</Unit>

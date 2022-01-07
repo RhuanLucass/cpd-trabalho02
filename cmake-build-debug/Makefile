@@ -128,6 +128,54 @@ Trabalho2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/build
 .PHONY : Trabalho2/fast
 
+hashing_enderecamento_aberto.obj: hashing_enderecamento_aberto.c.obj
+.PHONY : hashing_enderecamento_aberto.obj
+
+# target to build an object file
+hashing_enderecamento_aberto.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_enderecamento_aberto.c.obj
+.PHONY : hashing_enderecamento_aberto.c.obj
+
+hashing_enderecamento_aberto.i: hashing_enderecamento_aberto.c.i
+.PHONY : hashing_enderecamento_aberto.i
+
+# target to preprocess a source file
+hashing_enderecamento_aberto.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_enderecamento_aberto.c.i
+.PHONY : hashing_enderecamento_aberto.c.i
+
+hashing_enderecamento_aberto.s: hashing_enderecamento_aberto.c.s
+.PHONY : hashing_enderecamento_aberto.s
+
+# target to generate assembly for a file
+hashing_enderecamento_aberto.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_enderecamento_aberto.c.s
+.PHONY : hashing_enderecamento_aberto.c.s
+
+hashing_lista_endadeada.obj: hashing_lista_endadeada.c.obj
+.PHONY : hashing_lista_endadeada.obj
+
+# target to build an object file
+hashing_lista_endadeada.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_endadeada.c.obj
+.PHONY : hashing_lista_endadeada.c.obj
+
+hashing_lista_endadeada.i: hashing_lista_endadeada.c.i
+.PHONY : hashing_lista_endadeada.i
+
+# target to preprocess a source file
+hashing_lista_endadeada.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_endadeada.c.i
+.PHONY : hashing_lista_endadeada.c.i
+
+hashing_lista_endadeada.s: hashing_lista_endadeada.c.s
+.PHONY : hashing_lista_endadeada.s
+
+# target to generate assembly for a file
+hashing_lista_endadeada.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_endadeada.c.s
+.PHONY : hashing_lista_endadeada.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -161,6 +209,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Trabalho2
+	@echo ... hashing_enderecamento_aberto.obj
+	@echo ... hashing_enderecamento_aberto.i
+	@echo ... hashing_enderecamento_aberto.s
+	@echo ... hashing_lista_endadeada.obj
+	@echo ... hashing_lista_endadeada.i
+	@echo ... hashing_lista_endadeada.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
