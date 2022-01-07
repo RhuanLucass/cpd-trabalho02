@@ -53,14 +53,16 @@ void remover(Hash *tabela[], int num, int tam){
                 ant->prox = aux->prox;
                 free(aux);
             }
-            else
+            else{
                 printf("\nNumero nao encontrado.\n");
-            getch();
+                getch();
+            }
+
         }
     }
 }
 
-void inicializar(Hash *tabela[], int tam){
+void inicializar_encadeada(Hash *tabela[], int tam){
     for(int i = 0; i < tam; i++)
         tabela[i] = NULL;
 }
@@ -69,6 +71,7 @@ void menu(Hash *tabela[], int tam){
     int op, num, pos;
     do{
         system("cls");
+        printf("\nLISTA ENCADEADA\n");
         printf("\nMENU DE OPCOES\n");
         printf("\n1 - Inserir elemento");
         printf("\n2 - Mostrar tabela hashing");
@@ -118,7 +121,7 @@ void deslocamento_memoria(Hash *tabela[], int tam){
 int chamada_lista_encadeada(Hash *tabela[], int tam) {
 
     // Inicialização da tabela
-    inicializar(tabela, tam);
+    inicializar_encadeada(tabela, tam);
 
     menu(tabela, tam);
 

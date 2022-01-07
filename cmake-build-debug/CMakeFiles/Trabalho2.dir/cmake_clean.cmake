@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Trabalho2.dir/hashing_enderecamento_aberto.c.obj"
-  "CMakeFiles/Trabalho2.dir/hashing_lista_endadeada.c.obj"
+  "CMakeFiles/Trabalho2.dir/hashing_lista_encadeada.c.obj"
   "CMakeFiles/Trabalho2.dir/main.c.obj"
   "Trabalho2.exe"
   "Trabalho2.exe.manifest"

@@ -77,10 +77,13 @@
 		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_enderecamento_aberto.c">
 			<Option target="Trabalho2"/>
 		</Unit>
-		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_encadeada.h">
+		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_enderecamento_aberto.h">
 			<Option target="Trabalho2"/>
 		</Unit>
-		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_endadeada.c">
+		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_encadeada.c">
+			<Option target="Trabalho2"/>
+		</Unit>
+		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_encadeada.h">
 			<Option target="Trabalho2"/>
 		</Unit>
 		<Unit filename="C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/main.c">

@@ -152,29 +152,29 @@ hashing_enderecamento_aberto.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_enderecamento_aberto.c.s
 .PHONY : hashing_enderecamento_aberto.c.s
 
-hashing_lista_endadeada.obj: hashing_lista_endadeada.c.obj
-.PHONY : hashing_lista_endadeada.obj
+hashing_lista_encadeada.obj: hashing_lista_encadeada.c.obj
+.PHONY : hashing_lista_encadeada.obj
 
 # target to build an object file
-hashing_lista_endadeada.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_endadeada.c.obj
-.PHONY : hashing_lista_endadeada.c.obj
+hashing_lista_encadeada.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_encadeada.c.obj
+.PHONY : hashing_lista_encadeada.c.obj
 
-hashing_lista_endadeada.i: hashing_lista_endadeada.c.i
-.PHONY : hashing_lista_endadeada.i
+hashing_lista_encadeada.i: hashing_lista_encadeada.c.i
+.PHONY : hashing_lista_encadeada.i
 
 # target to preprocess a source file
-hashing_lista_endadeada.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_endadeada.c.i
-.PHONY : hashing_lista_endadeada.c.i
+hashing_lista_encadeada.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_encadeada.c.i
+.PHONY : hashing_lista_encadeada.c.i
 
-hashing_lista_endadeada.s: hashing_lista_endadeada.c.s
-.PHONY : hashing_lista_endadeada.s
+hashing_lista_encadeada.s: hashing_lista_encadeada.c.s
+.PHONY : hashing_lista_encadeada.s
 
 # target to generate assembly for a file
-hashing_lista_endadeada.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_endadeada.c.s
-.PHONY : hashing_lista_endadeada.c.s
+hashing_lista_encadeada.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho2.dir\build.make CMakeFiles/Trabalho2.dir/hashing_lista_encadeada.c.s
+.PHONY : hashing_lista_encadeada.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
@@ -212,9 +212,9 @@ help:
 	@echo ... hashing_enderecamento_aberto.obj
 	@echo ... hashing_enderecamento_aberto.i
 	@echo ... hashing_enderecamento_aberto.s
-	@echo ... hashing_lista_endadeada.obj
-	@echo ... hashing_lista_endadeada.i
-	@echo ... hashing_lista_endadeada.s
+	@echo ... hashing_lista_encadeada.obj
+	@echo ... hashing_lista_encadeada.i
+	@echo ... hashing_lista_encadeada.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

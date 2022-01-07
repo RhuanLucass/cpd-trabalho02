@@ -6,12 +6,10 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_enderecamento_aberto.c
+C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_enderecamento_aberto.h
 stdio.h
 -
 stdlib.h
--
-conio.h
 -
 
 C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_encadeada.h
@@ -19,16 +17,6 @@ stdio.h
 -
 stdlib.h
 -
-
-C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_endadeada.c
-stdio.h
--
-stdlib.h
--
-conio.h
--
-hashing_lista_encadeada.h
-C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_encadeada.h
 
 C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/main.c
 stdio.h
@@ -37,4 +25,6 @@ stdlib.h
 -
 hashing_lista_encadeada.h
 C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_lista_encadeada.h
+hashing_enderecamento_aberto.h
+C:/Users/rhuan/Desktop/Ceferno/C P Dados/Codigos/Trabalho2/hashing_enderecamento_aberto.h
 
