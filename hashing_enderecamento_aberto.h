@@ -17,7 +17,7 @@ int funcao_hashing_enderecamento(int num, int tam);
 
 void mostrar_hash_enderecamento( Hash_enderecamento tabela[], int tam);
 
-void inserir_enderecamento( Hash_enderecamento tabela[], int pos, int n, int tam);
+int inserir_enderecamento( Hash_enderecamento tabela[], int pos, int n, int tam);
 
 int buscar_enderecamento( Hash_enderecamento tabela[], int n, int tam);
 
@@ -25,9 +25,9 @@ void remover_enderecamento( Hash_enderecamento tabela[], int n, int tam);
 
 void inicializacao_enderecamento(Hash_enderecamento tabela[], int tam);
 
-void menu_enderecamento(Hash_enderecamento tabela[], int tam);
+void menu_enderecamento(Hash_enderecamento tabela[], int vet[], int tam_vet, int tam);
 
-void chamada_enderecamento(Hash_enderecamento tabela[], int tam);
+void chamada_enderecamento(Hash_enderecamento tabela[], int vet[],int tam_vet, int tam);
 
 
 #endif //TRABALHO2_HASHING_ENDERECAMENTO_ABERTO_H

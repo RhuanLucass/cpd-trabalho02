@@ -67,43 +67,50 @@ void inicializar_encadeada(Hash *tabela[], int tam){
         tabela[i] = NULL;
 }
 
-void menu(Hash *tabela[], int tam){
+void menu(Hash *tabela[], int vet[], int tam_vet, int tam){
     int op, num, pos;
+
+    for( int i = 0; i < tam_vet; i++){
+        pos = funcao_hashing(vet[i], tam);
+        inserir(tabela, pos, vet[i]);
+    }
+
     do{
         system("cls");
+        printf("\nForam inseridos %d valores aleatorios\n", tam_vet);
         printf("\nLISTA ENCADEADA\n");
         printf("\nMENU DE OPCOES\n");
-        printf("\n1 - Inserir elemento");
-        printf("\n2 - Mostrar tabela hashing");
-        printf("\n3 - Excluir elemento");
-        printf("\n4 - Sair");
+        printf("\n1 - Mostrar tabela hashing");
+        printf("\n2 - Excluir elemento");
+        printf("\n3 - Mostrar vetor aleatorio");
+        printf("\n0 - Sair");
         printf("\nDigite sua opcao: ");
         scanf("%d", &op);
 
-        if(op < 1 || op > 4)
+        if(op < 0 || op > 3)
             printf("\nOpcao invalida!");
         else{
             switch(op) {
                 case 1:
-                    printf("\nDigite um numero: ");
-                    scanf("%d", &num);
-                    pos = funcao_hashing(num, tam);
-                    inserir(tabela, pos, num);
-                    break;
-
-                case 2:
                     mostrar_hash(tabela, tam);
                     getch();
                     break;
 
-                case 3:
+                case 2:
                     printf("\nDigite um numero: ");
                     scanf("%d", &num);
                     remover(tabela, num, tam);
                     break;
+
+                case 3:
+                    printf("\nVetor: \n");
+                    for(int i = 0; i < tam_vet; i++)
+                        printf("%d ", vet[i]);
+                    getch();
             }
         }
-    }while(op != 4);
+    }while(op != 0);
+    exit(0);
 }
 
 void deslocamento_memoria(Hash *tabela[], int tam){
@@ -118,12 +125,12 @@ void deslocamento_memoria(Hash *tabela[], int tam){
     }
 }
 
-int chamada_lista_encadeada(Hash *tabela[], int tam) {
+int chamada_lista_encadeada(Hash *tabela[], int vet[], int tam_vet, int tam) {
 
     // Inicialização da tabela
     inicializar_encadeada(tabela, tam);
 
-    menu(tabela, tam);
+    menu(tabela, vet, tam_vet, tam);
 
     //Deslocamento de memoria
     deslocamento_memoria(tabela, tam);

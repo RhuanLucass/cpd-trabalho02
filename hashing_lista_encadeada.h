@@ -20,11 +20,11 @@ void remover(Hash *tabela[], int num, int tam);
 
 void inicializar_encadeada(Hash *tabela[], int tam);
 
-void menu(Hash *tabela[], int tam);
+void menu(Hash *tabela[], int vet[], int tam_vet, int tam);
 
 void deslocamento_memoria(Hash *tabela[], int tam);
 
-int chamada_lista_encadeada(Hash *tabela[], int tam);
+int chamada_lista_encadeada(Hash *tabela[], int vet[], int tam_vet, int tam);
 
 
 #endif //TRABALHO2_HASHING_LISTA_ENCADEADA_H
