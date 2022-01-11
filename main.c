@@ -28,14 +28,15 @@ void preencher_vetor(int vet[], int tam_vet){
 }
 
 int main() {
-    int tam_enderecamento = 200;
-    int tam_encadeada = 20;
+    int tam_enderecamento = 200000;
+    int tam_encadeada = 10000;
+    int tam_vet = 100000;
     int opcao;
+    int vet[tam_vet];
+
     Hash *tabela[tam_encadeada];
     Hash_enderecamento tabela_enderacamento[tam_enderecamento];
 
-    int tam_vet = 100;
-    int vet[tam_vet];
 
     preencher_vetor(vet, tam_vet);
 
@@ -62,7 +63,6 @@ int main() {
             }
         }
     }while(opcao != 0);
-
 
     return 0;
 }
