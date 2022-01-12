@@ -25,8 +25,6 @@ void remover_enderecamento( Hash_enderecamento tabela[], int n, int tam);
 
 void inicializacao_enderecamento(Hash_enderecamento tabela[], int tam);
 
-void menu_enderecamento(Hash_enderecamento tabela[], int vet[], int tam_vet, int tam);
-
 void chamada_enderecamento(Hash_enderecamento tabela[], int vet[],int tam_vet, int tam);
 
 

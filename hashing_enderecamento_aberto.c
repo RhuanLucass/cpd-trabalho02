@@ -41,7 +41,7 @@ int buscar_enderecamento( Hash_enderecamento tabela[], int n, int tam){
     if(tabela[(pos + i) % tam].chave == n && tabela [(pos + i) % tam].livre != 'R')
         return (pos + i) % tam;
     else
-        return tam; // Não encontrado
+        return -1; // Não encontrado
 }
 
 void remover_enderecamento( Hash_enderecamento tabela[], int n, int tam){
@@ -75,23 +75,30 @@ void chamada_enderecamento(Hash_enderecamento tabela[], int vet[], int tam_vet, 
 
     //Inserindo todos os elementos do vetor na tabela
     clock_t begin = clock(); //Tempo inicial
+
     for( int i = 0; i < tam_vet; i++){
         pos = funcao_hashing_enderecamento(vet[i], tam);
         inserir_enderecamento(tabela, pos, vet[i], tam);
     }
+
     clock_t end = clock(); //Tempo final
     double time_insercao_enderecamento = (double) (end - begin) / CLOCKS_PER_SEC;  //Calcula o tempo de execução
 
+
     printf("\n\nForam inseridos %d valores aleatorios\n", tam_vet);
+    //mostrar_hash_enderecamento(tabela, tam);
+
 
     //Buscando todos os valores na tabela
     printf("\nForam buscados todos os valores na tabela\n");
     clock_t inicio = clock(); //Tempo inicial
-    for(int i = 0; i < tam_vet; i++){
-        valor = buscar_enderecamento(tabela, vet[i], tam);
-    }
+
+    for(int i = 0; i < tam_vet; i++)
+        buscar_enderecamento(tabela, vet[i], tam);
+
     clock_t fim = clock(); //Tempo final
     double time_busca_enderecamento = (double) (fim - inicio) / CLOCKS_PER_SEC;  //Calcula o tempo de execução
+
 
     //Realizando a busca novamente para que os valores buscados sejam impressos sem contar a impressao no tempo total de busca
     /*for(int i = 0; i < tam_vet; i++){

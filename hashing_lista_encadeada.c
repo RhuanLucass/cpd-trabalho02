@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <conio.h>
 #include "hashing_lista_encadeada.h"
 
@@ -62,55 +63,22 @@ void remover(Hash *tabela[], int num, int tam){
     }
 }
 
+int busca(Hash *tabela[], int num, int tam) {
+    int pos = funcao_hashing(num, tam);
+    Hash *aux;
+    aux = tabela[pos];
+
+    while(aux != NULL){
+        if(aux->chave == num)
+            return aux->chave;
+        aux = aux->prox;
+    }
+    return -1;
+}
+
 void inicializar_encadeada(Hash *tabela[], int tam){
     for(int i = 0; i < tam; i++)
         tabela[i] = NULL;
-}
-
-void menu(Hash *tabela[], int vet[], int tam_vet, int tam){
-    int op, num, pos;
-
-    for( int i = 0; i < tam_vet; i++){
-        pos = funcao_hashing(vet[i], tam);
-        inserir(tabela, pos, vet[i]);
-    }
-
-    do{
-        system("cls");
-        printf("\nForam inseridos %d valores aleatorios\n", tam_vet);
-        printf("\nLISTA ENCADEADA\n");
-        printf("\nMENU DE OPCOES\n");
-        printf("\n1 - Mostrar tabela hashing");
-        printf("\n2 - Excluir elemento");
-        printf("\n3 - Mostrar vetor aleatorio");
-        printf("\n0 - Sair");
-        printf("\nDigite sua opcao: ");
-        scanf("%d", &op);
-
-        if(op < 0 || op > 3)
-            printf("\nOpcao invalida!");
-        else{
-            switch(op) {
-                case 1:
-                    mostrar_hash(tabela, tam);
-                    getch();
-                    break;
-
-                case 2:
-                    printf("\nDigite um numero: ");
-                    scanf("%d", &num);
-                    remover(tabela, num, tam);
-                    break;
-
-                case 3:
-                    printf("\nVetor: \n");
-                    for(int i = 0; i < tam_vet; i++)
-                        printf("%d ", vet[i]);
-                    getch();
-            }
-        }
-    }while(op != 0);
-    exit(0);
 }
 
 void deslocamento_memoria(Hash *tabela[], int tam){
@@ -130,10 +98,56 @@ int chamada_lista_encadeada(Hash *tabela[], int vet[], int tam_vet, int tam) {
     // Inicialização da tabela
     inicializar_encadeada(tabela, tam);
 
-    menu(tabela, vet, tam_vet, tam);
+    int pos;
+
+    //Imprimir vetor aleatorio
+    /*printf("\nVetor: \n");
+    for(int i = 0; i < tam_vet; i++)
+        printf("%d ", vet[i]);*/
+
+    //Inserindo todos os elementos do vetor na tabela
+    clock_t begin = clock(); //Tempo inicial
+
+    for( int i = 0; i < tam_vet; i++){
+        pos = funcao_hashing(vet[i], tam);
+        inserir(tabela, pos, vet[i]);
+    }
+
+    clock_t end = clock(); //Tempo final
+    double time_insercao_encadeada = (double) (end - begin) / CLOCKS_PER_SEC;  //Calcula o tempo de execução
+
+
+    printf("\n\nForam inseridos %d valores aleatorios\n", tam_vet);
+    //mostrar_hash(tabela, tam);
+
+
+    //Buscando todos os valores na tabela
+    printf("\nForam buscados todos os valores na tabela\n");
+
+
+    printf("\n\n");
+    clock_t inicio = clock(); //Tempo inicial
+
+    for(int i = 0; i < tam_vet; i++)
+        busca(tabela, vet[i], tam);
+
+    clock_t fim = clock(); //Tempo final
+    double time_busca_encadeada = (double) (fim - inicio) / CLOCKS_PER_SEC;  //Calcula o tempo de execução
+
+    //Realizando a busca novamente para que os valores buscados sejam impressos sem contar a impressao no tempo total de busca
+    /*for(int i = 0; i < tam_vet; i++){
+        int res = busca(tabela, vet[i], tam);
+        printf("%d ", res);
+    }*/
 
     //Deslocamento de memoria
     deslocamento_memoria(tabela, tam);
+
+    printf("\n\nTempo total para:\n");
+    printf("INSERIR: %lf\n", time_insercao_encadeada);
+    printf("BUSCAR: %lf\n", time_busca_encadeada);
+
+    getch();
 
     return 0;
 }

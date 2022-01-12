@@ -18,9 +18,9 @@ void inserir(Hash *tabela[], int pos, int n);
 
 void remover(Hash *tabela[], int num, int tam);
 
-void inicializar_encadeada(Hash *tabela[], int tam);
+int busca(Hash *tabela[], int num, int tam);
 
-void menu(Hash *tabela[], int vet[], int tam_vet, int tam);
+void inicializar_encadeada(Hash *tabela[], int tam);
 
 void deslocamento_memoria(Hash *tabela[], int tam);
 
