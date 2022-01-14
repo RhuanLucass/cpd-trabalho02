@@ -245,7 +245,7 @@ int main() {
             preencherVetor(vet, n);
             printf("%d ", vet[i]);
         }
-        printf("Menu de opcoes: \n");
+        printf("\n\nMenu de opcoes: \n");
         printf("\n1-Inserir na arvore\n");
         printf("\n2-Consultar um no da arvore\n");
         printf("\n3-Excluir um no da arvore\n");
@@ -328,12 +328,12 @@ int main() {
 
         else if(op == 2)
         {
-        clock_t begin = clock();
         for(int i=0; i<n; i++)
         {
             preencherVetor(vet, n);
             printf("%d ", vet[i]);
         }
+
             printf("\n\nMenu de opcoes: \n");
             printf("\n1-Inserir na arvore\n");
             printf("\n2-Consultar um no da arvore\n");
@@ -341,6 +341,7 @@ int main() {
             printf("\n4-Sair\n\n");
             printf("Digite sua opcao:\n");
             scanf("%d", &op3);
+            clock_t begin = clock();
             if(op3 < 1 || op3 > 4)
             {
                 printf("Opcao invalida!\n");
