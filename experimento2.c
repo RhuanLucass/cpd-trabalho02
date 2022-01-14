@@ -323,10 +323,12 @@ int main() {
       clock_t end = clock();
       time_spent = (double) (end - begin) / CLOCKS_PER_SEC;
       printf("Tempo de execucao: %.1f s\n", time_spent);   
+      
     }
 
         else if(op == 2)
         {
+        clock_t begin = clock();
         for(int i=0; i<n; i++)
         {
             preencherVetor(vet, n);
@@ -405,15 +407,17 @@ int main() {
                     return 0;
                 }   
             }
-
+            clock_t end = clock();
+            time_spent = (double) (end - begin) / CLOCKS_PER_SEC;
+            printf("Tempo de execucao: %.1f s\n", time_spent);  
         }    
         else if(op == 0)
         {
             return 0;
         }
+        
     getch();
     }
-    
     return 0;
 }    
     
