@@ -19,13 +19,17 @@ void mostrar_hash_enderecamento( Hash_enderecamento tabela[], int tam);
 
 int inserir_enderecamento( Hash_enderecamento tabela[], int pos, int n, int tam);
 
+int inserir_quadratica(Hash_enderecamento tabela[], int n, int tam);
+
 int buscar_enderecamento( Hash_enderecamento tabela[], int n, int tam);
 
-void remover_enderecamento( Hash_enderecamento tabela[], int n, int tam);
+int buscar_end_quadratica( Hash_enderecamento tabela[], int n, int tam);
 
 void inicializacao_enderecamento(Hash_enderecamento tabela[], int tam);
 
 void chamada_enderecamento(Hash_enderecamento tabela[], int vet[],int tam_vet, int tam);
+
+void chamada_end_quadratica(Hash_enderecamento tabela[], int vet[], int tam_vet, int tam);
 
 
 #endif //TRABALHO2_HASHING_ENDERECAMENTO_ABERTO_H

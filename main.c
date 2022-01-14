@@ -28,8 +28,8 @@ void preencher_vetor(int vet[], int tam_vet){
 }
 
 int main() {
-    int tam_enderecamento = 200000;
-    int tam_encadeada = 5000;
+    int tam_enderecamento = 150000;
+    int tam_encadeada = 50000;
     int tam_vet = 100000;
     int opcao;
     int vet[tam_vet];
@@ -43,13 +43,14 @@ int main() {
     do{
         system("cls");
         printf("\nMENU DE OPCOES\n");
-        printf("\n1 - Enderecamento aberto");
-        printf("\n2 - Lista encadeada");
+        printf("\n1 - Enderecamento aberto linear");
+        printf("\n2 - Enderecamento aberto quadratico");
+        printf("\n3 - Lista encadeada");
         printf("\n0 - Sair");
         printf("\nDigite sua opcao: ");
         scanf("%d", &opcao);
 
-        if(opcao < 0 || opcao > 2)
+        if(opcao < 0 || opcao > 3)
             printf("\nOpcao invalida!\n");
         else {
             switch (opcao) {
@@ -58,6 +59,10 @@ int main() {
                     break;
 
                 case 2:
+                    chamada_end_quadratica(tabela_enderacamento, vet, tam_vet, tam_enderecamento);
+                    break;
+
+                case 3:
                     chamada_lista_encadeada(tabela, vet, tam_vet, tam_encadeada);
                     break;
             }

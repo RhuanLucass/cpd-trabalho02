@@ -33,36 +33,6 @@ void inserir(Hash *tabela[], int pos, int n){
     tabela[pos] = novo;
 }
 
-void remover(Hash *tabela[], int num, int tam){
-    int pos = funcao_hashing(num, tam);
-    Hash *aux;
-
-    if(tabela[pos] != NULL){
-        if(tabela[pos]->chave == num){
-            aux = tabela[pos];
-            tabela[pos] = tabela[pos]->prox;
-            free(aux);
-        }
-        else{
-            aux = tabela[pos]->prox;
-            Hash *ant = tabela[pos];
-            while(aux != NULL && aux->chave != num){
-                ant = aux;
-                aux = aux->prox;
-            }
-            if(aux != NULL){
-                ant->prox = aux->prox;
-                free(aux);
-            }
-            else{
-                printf("\nNumero nao encontrado.\n");
-                getch();
-            }
-
-        }
-    }
-}
-
 int busca(Hash *tabela[], int num, int tam) {
     int pos = funcao_hashing(num, tam);
     Hash *aux;
