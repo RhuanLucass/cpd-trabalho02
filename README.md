@@ -1,65 +1,65 @@
-# Trabalho Prático II - Classificação e Pesquisa de Dados
+# Practical Work II - Data Classification and Search
 
-**Grupo:** Davi Santos Ferrarez, Rhuan Lucas Barbosa Fernandes  
-**Curso:** Engenharia de Computação  
+**Group:** Davi Santos Ferrarez, Rhuan Lucas Barbosa Fernandes  
+**Course:** Computer Engineering  
 
-## Experimento 1 - Comparação de Algoritmos de Transformação de Chave (Hashing)
+## Experiment 1 - Comparison of Key Transformation Algorithms (Hashing)
 
-### Introdução
-O Experimento 1 visa comparar o tempo de execução para inserção e busca em diferentes tipos de algoritmos de transformação de chave (hashing). A tabela hash é a generalização de um vetor com associação entre chaves e valores, visando buscar de forma rápida através de uma chave simples e encontrar o valor desejado.
+### Introduction
+Experiment 1 aims to compare the execution time for insertion and search in different types of key transformation algorithms (hashing). The hash table is a generalization of a vector with associations between keys and values, aiming for quick search through a simple key to find the desired value.
 
-### Tabela (tempo em segundos) e Discussão dos Resultados
-#### Teste 1
-- Tamanho do vetor: 100 mil
-- Tamanho vetor endereçamento aberto: 200 mil
-- Tamanho vetor lista encadeada: 5 mil
+### Table (time in seconds) and Discussion of Results
+#### Test 1
+- Vector size: 100,000
+- Open addressing vector size: 200,000
+- Chained list vector size: 5,000
 
-| Algoritmo    | Sondagem Linear | Sondagem Quadrática | Lista Encadeada |
-|--------------|-----------------|---------------------|-----------------|
-| Inserção     | 0.004           | 0.002               | 0.012           |
-| Busca        | 0.005           | 0.002               | 0.019           |
+| Algorithm     | Linear Probing | Quadratic Probing | Chained List |
+|---------------|----------------|--------------------|--------------|
+| Insertion     | 0.004          | 0.002              | 0.012        |
+| Search        | 0.005          | 0.002              | 0.019        |
 
-#### Teste 2
-- Tamanho do vetor: 100 mil elementos
-- Tamanho vetor endereçamento aberto: 100001
-- Tamanho vetor lista encadeada: 99999
+#### Test 2
+- Vector size: 100,000 elements
+- Open addressing vector size: 100001
+- Chained list vector size: 99999
 
-| Algoritmo    | Sondagem Linear | Sondagem Quadrática | Lista Encadeada |
-|--------------|-----------------|---------------------|-----------------|
-| Inserção     | 0.005           | 0.003               | 0.012           |
-| Busca        | 0.005           | 0.002               | 0.020           |
+| Algorithm     | Linear Probing | Quadratic Probing | Chained List |
+|---------------|----------------|--------------------|--------------|
+| Insertion     | 0.005          | 0.003              | 0.012        |
+| Search        | 0.005          | 0.002              | 0.020        |
 
-#### Teste 3
-- Tamanho do vetor: 100 mil elementos
-- Tamanho vetor endereçamento aberto: 150 mil
-- Tamanho vetor lista encadeada: 50 mil
+#### Test 3
+- Vector size: 100,000 elements
+- Open addressing vector size: 150,000
+- Chained list vector size: 50,000
 
-| Algoritmo    | Sondagem Linear | Sondagem Quadrática | Lista Encadeada |
-|--------------|-----------------|---------------------|-----------------|
-| Inserção     | 0.004           | 0.002               | 0.011           |
-| Busca        | 0.004           | 0.001               | 0.020           |
+| Algorithm     | Linear Probing | Quadratic Probing | Chained List |
+|---------------|----------------|--------------------|--------------|
+| Insertion     | 0.004          | 0.002              | 0.011        |
+| Search        | 0.004          | 0.001              | 0.020        |
 
-### Conclusão
-Através dos testes realizados, observamos que o hashing de endereçamento aberto com sondagem quadrática obteve o melhor tempo em todas as tentativas. Isso se deve ao fato de que a sondagem quadrática encontra uma posição livre no vetor mais rapidamente do que a linear. Além disso, a tabela hash com lista encadeada percorre toda a lista referente à chave, resultando em um tempo maior.
+### Conclusion
+Through the tests, it was observed that open addressing hashing with quadratic probing achieved the best time in all attempts. This is due to the fact that quadratic probing finds a free position in the vector more quickly than linear probing. Additionally, the hash table with a chained list traverses the entire key-related list, resulting in a longer time.
 
-## Experimento 2 - Árvore Binária de Busca (ABB) e Árvore AVL
+## Experiment 2 - Binary Search Tree (BST) and AVL Tree
 
-### Introdução
-O Experimento 2 compara dois algoritmos: Árvore Binária de Busca (ABB) e Árvore AVL. A ABB possui cada nó como um objeto contendo atributos left, right e p, enquanto a AVL é balanceada, garantindo que a diferença de altura entre subárvores direita e esquerda seja 1, 0 ou -1.
+### Introduction
+Experiment 2 compares two algorithms: Binary Search Tree (BST) and AVL Tree. In a BST, each node is an object containing attributes left, right, and p, while an AVL is balanced, ensuring that the height difference between right and left subtrees is 1, 0, or -1.
 
-### Tabela (tempo em segundos) e Discussão dos Resultados
-- Tempo de inserção
-- Tempo de busca
-- Tempo de remoção
+### Table (time in seconds) and Discussion of Results
+- Insertion time
+- Search time
+- Removal time
 
-| Algoritmo | Inserção | Busca | Remoção |
-|-----------|----------|-------|---------|
-| ABB       | 0.002    | 0.001 | 0.227   |
-| AVL       | 0.002    | 0.001 | 0.259   |
+| Algorithm | Insertion | Search | Removal |
+|-----------|-----------|--------|---------|
+| BST       | 0.002     | 0.001  | 0.227   |
+| AVL       | 0.002     | 0.001  | 0.259   |
 
-### Conclusão
-Observou-se que o tempo de inserção e busca em ambos os algoritmos é aproximadamente igual. No entanto, a AVL apresenta um tempo de remoção menor em comparação com a ABB. O tempo de busca em ambos os algoritmos é mais rápido que o tempo de inserção. O tempo de remoção em ambas as árvores é consideravelmente mais longo em comparação com os outros casos.
+### Conclusion
+It was observed that insertion and search times in both algorithms are approximately equal. However, AVL has a lower removal time compared to BST. The search time in both algorithms is faster than the insertion time. The removal time in both trees is considerably longer compared to the other cases.
 
-Para acessar o trabalho completo, utilize os seguintes links:
-- [Experimento 1 no GitHub](https://github.com/RhuanLucass/cpd-trabalho02/tree/master/Experimento1)
-- [Experimento 2 no GitHub](https://github.com/RhuanLucass/cpd-trabalho02/blob/master/Experimento2/main.c)
+To access the complete work, use the following links:
+- [Experiment 1 on GitHub](https://github.com/RhuanLucass/cpd-trabalho02/tree/master/Experimento1)
+- [Experiment 2 on GitHub](https://github.com/RhuanLucass/cpd-trabalho02/blob/master/Experimento2/main.c)
